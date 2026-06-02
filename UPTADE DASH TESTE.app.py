@@ -170,12 +170,13 @@ with col_g2:
     
     fig_barra = go.Figure()
     fig_barra.add_trace(go.Bar(x=df_barra["Unidade"], y=df_barra["CMV%"], marker_color=df_barra["Cor"], name="CMV %"))
-    fig_barra.add_shape(type="line", x0=-0.5, x1=len(df_barra)-0.5, y0=30, y1=30,
-                        line=dict(color="#F59E0B", width=2, dash="dash"))
-    
-    fig_barra.update_layout(
-        paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)',
-        font_color="#FFFFFF", margin=dict(l=20, r=20, t=20, b=20),
+   fig_barra.update_layout(
+        paper_bgcolor='rgba(0,0,0,0)', 
+        plot_bgcolor='rgba(0,0,0,0)',
+        font_color="#FFFFFF", 
+        margin=dict(l=20, r=20, t=20, b=20),
+        yaxis=dict(ticksuffix="%", showgrid=True, gridcolor='#1E293B')
+    )
         yaxis=dict(suffix="%", showgrid=True, gridcolor='#1E293B')
     )
     st.plotly_chart(fig_barra, use_container_width=True)
