@@ -142,7 +142,7 @@ with col5:
         </div>
     """)
 
-st.markdown("<br>", unsafe_allowed_html=True)
+st.write("")
 
 # 7. LINHA 2: GRÁFICOS (Evolução e Meta)
 col_g1, col_g2 = st.columns([2, 1])
@@ -210,7 +210,7 @@ with col_r6:
     top_cmo = df_rank.sort_values(by="CMO%").iloc[0]["Unidade"]
     st.html(f'<div class="ranking-card"><div class="ranking-title">⚡ CMO Eficiente</div><div class="ranking-value">{top_cmo}</div></div>')
 
-st.markdown("<br>", unsafe_allowed_html=True)
+st.write("")
 
 # 9. LINHA 4: TABELA COMPARATIVA DE UNIDADES
 st.markdown("### Comparativo Entre Unidades")
